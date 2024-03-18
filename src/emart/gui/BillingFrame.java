@@ -321,7 +321,7 @@ public class BillingFrame extends javax.swing.JFrame {
                 al.set(index,prd);
             }
             
-            String grTt = ""+(int)grdTotal;
+            String grTt = "Total :"+""+(int)grdTotal;
             lblTotal.setText(grTt);
 
         } catch (SQLException ex) {
