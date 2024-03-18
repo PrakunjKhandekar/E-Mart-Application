@@ -308,8 +308,10 @@ public class RemoveEmployeesFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null,"Cannot delete employee!!","Error",JOptionPane.ERROR_MESSAGE);
                 return;
             }
-            else
+            else{
                 JOptionPane.showMessageDialog(null,"Employee Deleted Successfullly!!","Success",JOptionPane.INFORMATION_MESSAGE);
+                clearText();
+            }
         }
         catch (SQLException ex) {
                 JOptionPane.showMessageDialog(null,"DB Error","Error",JOptionPane.ERROR_MESSAGE);
@@ -428,10 +430,10 @@ public class RemoveEmployeesFrame extends javax.swing.JFrame {
         }
     }
 
-//
-//    private void clearText() {
-//        txtSalary.setText("");
-//        txtEmpName.setText("");
-//        txtJob.setSelectedIndex(0);
-//    }
+    private void clearText() {
+        empComBox.setSelectedIndex(0);
+        txtSalary.setText("");
+        txtEmpName.setText("");
+        txtJob.setText("");
+    }
 }
